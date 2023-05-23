@@ -1,10 +1,10 @@
-//Напиши класс Storage, который будет создавать объекты для управления складом товаров.
-//При вызове будет получать один аргумент - начальный массив товаров, и записывать его в свойство items.
-//Добавь методы класса:
+// Write a class called Storage that creates objects for managing a goods warehouse.
+// When called, it will receive one argument - an initial array of goods - and store it in the items property.
+// Add the following methods to the class:
 
-//getItems() - возвращает массив текущих товаров
-//addItem(item) - получает новый товар и добавляет его к текущим
-//removeItem(item) - получет товар и, если он есть, удаляет его из текущих
+// getItems() - returns the current array of goods.
+// addItem(item) - receives a new item and adds it to the current goods.
+// removeItem(item) - receives an item and, if it exists, removes it from the current goods.
 
 class Storage {
   constructor(goods) {
@@ -24,17 +24,18 @@ class Storage {
 }
 
 const storage = new Storage([
-  'Нанитоиды',
-  'Пролонгер',
-  'Железные жупи',
-  'Антигравитатор',
-]);
-
-const items = storage.getItems();
-console.table(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
-
-storage.addItem('Дроид');
-console.table(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
-
-storage.removeItem('Пролонгер');
-console.table(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]
+	'Nanoids',
+	'Prolonger',
+	'Iron Guppies',
+	'Antigravitator',
+	]);
+	
+	const items = storage.getItems();
+	console.table(items); // [ "Nanoids", "Prolonger", "Iron Guppies", "Antigravitator" ]
+	
+	storage.addItem('Droid');
+	console.table(storage.items); // [ "Nanoids", "Prolonger", "Iron Guppies", "Antigravitator", "Droid" ]
+	
+	storage.removeItem('Prolonger');
+	console.table(storage.items); // [ "Nanoids", "Iron Guppies", "Antigravitator", "Droid" ]
+	

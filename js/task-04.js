@@ -1,11 +1,11 @@
-//Напиши класс StringBuilder. На вход он получает один параметр - строку, которую записывает в свойство _value.
+// Write a class called StringBuilder. It takes one parameter - a string - and assigns it to the _value property.
 
-//Добавь классу следующий функционал:
+// Add the following functionality to the class:
 
-//Геттер value - возвращает текущее значение поля _value
-//Метод append(str) - получает парметр str (строку) и добавляет ее в конец _value
-//Метод prepend(str) - получает парметр str (строку) и добавляет ее в начало value
-//Метод pad(str) - получает парметр str (строку) и добавляет ее в начало и в конец _value
+// Getter value - returns the current value of the _value field.
+// Method append(str) - receives a parameter str (a string) and appends it to the end of _value.
+// Method prepend(str) - receives a parameter str (a string) and adds it to the beginning of _value.
+// Method pad(str) - receives a parameter str (a string) and adds it to both the beginning and the end of _value.
 
 class StringBuilder {
   constructor(data) {

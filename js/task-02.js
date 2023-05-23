@@ -1,8 +1,9 @@
-// Напиши класс User для создания пользователя со следующим свойствами:
-//name - строка
-//age - число
-//followers - число
-//Добавь метод getInfo(), который, выводит строку: User ${имя} is ${возраст} years old and has ${кол-во фоловеров} followers
+// Write a class called User for creating a user with the following properties:
+// name - string
+// age - number
+// followers - number
+// Add a method called getInfo() that outputs the following string: 
+// "User ${name} is ${age} years old and has ${number of followers} followers".
 
 class User {
   constructor(userData) {

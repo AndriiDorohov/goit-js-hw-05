@@ -1,6 +1,5 @@
-//Напиши функцию - конструктор Account, которая создает объект со свойствами login и email.
-//В prototype функции - конструктора добавь метод getInfo(),
-//который выводит в консоль значения полей login и email объекта который его вызвал.
+// Write a constructor function called Account that creates an object with properties login and email.
+// Add a method called getInfo() to the prototype of the constructor function, which outputs the values of the login and email fields of the object that invokes it to the console.
 
 const Account = function (data) {
   this.login = data.login;
