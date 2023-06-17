@@ -1,21 +1,19 @@
-**Читать на других языках: [Русский](README.md), [Українська](README.ua.md).**
+# Admission criteria
 
-# Критерии приема
+- The repository `goit-js-hw-05` has been created
+- When submitting homework, there is a link to the source files in the repository
+- Each task is executed in a separate file named `task-task_number.js`.
+  Use `<script type="module">` to close the task code in a separate
+scope and avoid identifier name conflicts.
+- The names of variables and functions are clear, descriptive
+- The code is formatted with Prettier
 
-- Создан репозиторий `goit-js-hw-05`
-- При сдаче домашней работы есть ссылка на исходные файлы в репозитории
-- Каждое задание выполнено в отдельном файле с именем `task-номер_задания.js`.
-  Используй `<script type="module">` чтобы закрыть код задания в отдельной
-  области видимости и избежать конфликтов имен идентификаторов.
-- Имена переменных и функций понятные, описательные
-- Код отформатирован с помощью Prettier
+# Task 1
 
-# Задание 1
-
-Напиши функцию-конструктор `Account`, которая создает объект со свойствами
-`login` и `email`. В `prototype` функции-конструктора добавь метод `getInfo()`,
-который выводит в консоль значения полей `login` и `email` объекта который его
-вызвал.
+Write a constructor function `Account` that creates an object with properties
+`login` and `email'. In the `prototype` of the constructor function, add the `getInfo()` method,
+which outputs to the console the values of the `login` and `email` fields of the object that
+called it.
 
 ```js
 console.log(Account.prototype.getInfo); // function
@@ -35,16 +33,16 @@ const poly = new Account({
 poly.getInfo(); // Login: Poly, Email: poly@mail.com
 ```
 
-# Задание 2
+# Task 2
 
-Напиши класс `User` для создания пользователя со следующим свойствами:
+Write a `User` class to create a user with the following properties:
 
-- `name` - строка
-- `age` - число
-- `followers` - число
+- `name' - string
+- `age' - number
+- `followers' - number
 
-Добавь метод `getInfo()`, который, выводит строку:
-`User ${имя} is ${возраст} years old and has ${кол-во фоловеров} followers`
+Add the 'getInfo()` method, which outputs the string:
+`User ${name} is ${age} years old and has ${number of followers} followers`
 
 ```js
 const mango = new User({
@@ -64,50 +62,50 @@ const poly = new User({
 poly.getInfo(); // User Poly is 3 years old and has 17 followers
 ```
 
-# Задание 3
+# Task 3
 
-Напиши класс `Storage`, который будет создавать объекты для управления складом
-товаров. При вызове будет получать один аргумент - начальный массив товаров, и
-записывать его в свойство `items`.
+Write a `Storage` class that will create objects for warehouse management
+goods. When called, it will receive one argument - the initial array of goods, and
+write it to the `items` property.
 
-Добавь методы класса:
+Add class methods:
 
-- `getItems()` - возвращает массив текущих товаров
-- `addItem(item)` - получает новый товар и добавляет его к текущим
-- `removeItem(item)` - получет товар и, если он есть, удаляет его из текущих
+- `GetItems()' - returns an array of current products
+- `addItem(item)` - receives a new product and adds it to the current ones
+- `removeItem(item)` - receives the product and, if there is one, removes it from the current
 
 ```js
 const storage = new Storage([
-  'Нанитоиды',
-  'Пролонгер',
-  'Железные жупи',
-  'Антигравитатор',
+  'Nanitoids',
+  'Prolonger',
+  'Iron Bugs',
+  'Anti-gravity',
 ]);
 
-const items = storage.getItems();
-console.table(items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор" ]
+const items = storage.GetItems();
+console.table(items); // [ "Nanitoids", "Prolonger", "Iron bugs", "Antigrav"]
 
-storage.addItem('Дроид');
-console.table(storage.items); // [ "Нанитоиды", "Пролонгер", "Железные жупи", "Антигравитатор", "Дроид" ]
+storage.addItem('Droid');
+console.table(storage.items); // [ "Nanitoids", "Prolonger", "Iron bugs", "Antigrav", "Droid" ]
 
-storage.removeItem('Пролонгер');
-console.table(storage.items); // [ "Нанитоиды", "Железные жупи", "Антигравитатор", "Дроид" ]
-```
+storage.removeItem('Prolonger');
+console.table(storage.items); // [ "Nanitoids", "Iron bugs", "Antigrav", "Droid" ]
+``
 
-# Задание 4
+# Task 4
 
-Напиши класс `StringBuilder`. На вход он получает один параметр - строку,
-которую записывает в свойство `_value`.
+Write the `StringBuilder` class. It receives one parameter as input - a string,
+which it writes to the `_value` property.
 
-Добавь классу следующий функционал:
+Add the following functionality to the class:
 
-- Геттер `value` - возвращает текущее значение поля `_value`
-- Метод `append(str)` - получает парметр str (строку) и добавляет ее в конец
+- Getter `value` - returns the current value of the `_value' field
+- The `append(str)` method - gets the parmeter str (string) and adds it to the end
   `_value`
-- Метод `prepend(str)` - получает парметр str (строку) и добавляет ее в начало
+- The `prepend(str)` method - gets the parmeter str (string) and adds it to the beginning
   value
-- Метод `pad(str)` - получает парметр str (строку) и добавляет ее в начало и в
-  конец `_value`
+- The `pad(str)` method - gets the parmeter str (string) and adds it to the beginning and
+end of `_value`
 
 ```js
 const builder = new StringBuilder('.');
@@ -122,64 +120,64 @@ builder.pad('=');
 console.log(builder.value); // '=^.^='
 ```
 
-# Задание 5
+# Task 5
 
-Напиши класс `Car` с указанными свойствами и методами.
+Write a `Car` class with the specified properties and methods.
 
 ```js
 class Car {
   /*
-   * Добавь статический метод `getSpecs(car)`,
-   * который принимает объект-машину как параметр и выводит
-   * в консоль значения свойств maxSpeed, speed, isOn, distance и price.
+   * Add the static method `getSpecs(car)`,
+   * which takes the machine object as a parameter and outputs
+   * in the console, the values of the maxSpeed, speed, isOn, distance and price properties.
    */
 
   /*
-   * Конструктор получает объект настроек.
+   * The constructor gets the settings object.
    *
-   * Добавь свойства будущеего экземпляра класса:
-   *  speed - текущая скорость, изначально 0
-   *  price - цена автомобиля
-   *  maxSpeed - максимальная скорость
-   *  isOn - заведен ли автомобиль, значения true или false. Изначально false
-   *  distance - общий киллометраж, изначально 0
-   */
-  constructor() {}
+   * Add the properties of the future instance of the class:
+* speed - the current speed, initially 0
+* price - the price of the car
+   * maxSpeed - maximum speed
+   * isOn - whether the car is started, the values are true or false. Initially false
+   * distance - total mileage, initially 0
+*/
+constructor() {}
 
   /*
-   * Добавь геттер и сеттер для свойства price,
-   * который будет работать с свойством цены автомобиля.
+   * Add a getter and setter for the price property,
+   * which will work with the car price property.
    */
 
   /*
-   * Добавь код для того чтобы завести автомобиль
-   * Записывает в свойство isOn значение true
-   */
-  turnOn() {}
+   * Add a code to start the car
+   * Writes the value true to the isOn property
+*/
+TurnOn() {}
 
   /*
-   * Добавь код для того чтобы заглушить автомобиль
-   * Записывает в свойство isOn значение false,
-   * и сбрасывает текущую скорость в 0
-   */
-  turnOff() {}
+   * Add a code to mute the car
+   * Writes the value false to the isOn property,
+* and resets the current speed to 0
+*/
+turnOff() {}
 
   /*
-   * Добавялет к свойству speed полученное значение,
-   * при условии что результирующая скорость
-   * не больше чем значение свойства maxSpeed
-   */
-  accelerate(value) {}
+   * Appends the received value to the speed property,
+   * provided that the resulting speed
+   * no more than the value of the maxSpeed property
+*/
+accelerate(value) {}
 
   /*
-   * Отнимает от свойства speed полученное значение,
-   * при условии что результирующая скорость не меньше нуля
+   * Subtracts the received value from the speed property,
+   * provided that the resulting velocity is not less than zero
    */
   decelerate(value) {}
 
   /*
-   * Добавляет в поле distance киллометраж (hours * speed),
-   * но только в том случае если машина заведена!
+   * Adds a kilometer (hours * speed) to the distance field,
+   * but only if the car is started!
    */
   drive(hours) {}
 }
